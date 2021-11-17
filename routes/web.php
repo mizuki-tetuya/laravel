@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\TestController;
+/*
+use App\Http\Middleware\FirstMiddleware;
+*/
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +17,6 @@ use App\Http\Controllers\TestController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
-Route::get('/test/{room}/{id}', function ($room = 200, $id = 3) {
-   return 'roomが' . $room . 'でidは' . $id . 'です';
+Route::get('/', function () {
+  return view('index');
 });
-
-
-Route::get('/test/{greeting?}', function($greeting = "Goodmorning") {
-    return $greeting . '=おはようございます';
-});
-
-Route::get('/test', [TestController::class, 'index']);
