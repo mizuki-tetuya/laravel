@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\TestController;
 /*
 use App\Http\Middleware\FirstMiddleware;
@@ -17,6 +16,6 @@ use App\Http\Middleware\FirstMiddleware;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-  return view('index');
-});
+
+Route::get('/', [TestController::class, 'index']);
+Route::post('/', [TestController::class, 'post']);
