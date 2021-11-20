@@ -35,7 +35,7 @@ class ClientRequest extends FormRequest
             'registered_at' => 'date|nullable',
         ];
     }
-    public function message()
+   public function messages()
     {
         return [
             'name.required' => '名前を入力してください',
@@ -45,5 +45,9 @@ class ClientRequest extends FormRequest
             'age.numeric' => '年齢は数値で入力してください',
             'registered_at.date' => '日付の形式で入力してください'
         ];
+    }
+    protected function getRedirectUrl()
+    {
+        return 'verror';
     }
 }

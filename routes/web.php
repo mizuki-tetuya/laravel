@@ -17,5 +17,5 @@ use App\Http\Middleware\FirstMiddleware;
 |
 */
 
-Route::get('/', [TestController::class, 'index']);
-Route::post('/', [TestController::class, 'post']);
+Route::get('/building', [TestController::class, 'index']);
+Route::get('/building/{room}', [TestController::class, 'room']);

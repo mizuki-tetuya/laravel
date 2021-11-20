@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,8 @@
 </head>
 
 <body>
-  <h1>タイトル</h1>
+  <h1><?php echo $txt; ?></h1>
+  <h1><?php echo $param; ?></h1>
 </body>
 
 </html>

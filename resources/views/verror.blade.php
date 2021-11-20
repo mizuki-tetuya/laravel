@@ -8,12 +8,6 @@
 </head>
 
 <body>
-  <h1>{{$content}}</h1>
-  <form action="/" method="POST">
-    @csrf
-    <input type="text" name="content">
-    <input type="submit">
-  </form>
+  <p>入力内容にエラーがありました</p>
 </body>
-
 </html>

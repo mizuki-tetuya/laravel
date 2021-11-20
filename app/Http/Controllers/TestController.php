@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\ClientRequest;
+
 
 class TestController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
-        return view('index', ['txt' => 'フォームを入力']);
+        return '建物です';
     }
-    public function post(ClientRequest $request)
+    public function room($text = room)
     {
-        return view('index', ['txt' => '正しい入力です']);
+        return "部屋番号は" . $text . "です";
     }
 }
